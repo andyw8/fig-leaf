@@ -5,7 +5,7 @@ module FigLeaf
     # Given a list of classes, modules, strings, and symbols, compile
     # a combined list of methods. Classes and modules will be queried
     # for their instance methods; strings and symbols will be treated
-    # as method names. 
+    # as method names.
     #
     # Once the list is compiled, make all of the methods private.
     #
@@ -35,7 +35,7 @@ module FigLeaf
       protect_methods    = collect_methods(true, *protect)
       methods_to_hide    = collect_methods(include_ancestors, *stuff)
       (methods_to_hide - except_methods).each do |method_name|
-        mod.module_eval do 
+        mod.module_eval do
           next unless method_defined?(method_name)
           if protect_methods.include?(method_name)
             protected method_name
