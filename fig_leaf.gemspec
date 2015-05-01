@@ -8,4 +8,5 @@ Gem::Specification.new do |s|
   s.email       = ["sam@codeodor.com"]
   s.files       = ["lib/fig_leaf.rb"]
   s.homepage    = 'https://github.com/objects-on-rails/fig-leaf'
+  s.add_development_dependency "rspec", "~> 3.2"
 end
